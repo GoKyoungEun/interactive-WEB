@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mouse move</title>
+  <style>
+    *{ box-sizing: border-box; }
+    body {
+      padding: 0;
+      margin: 0;
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+    #container{
+      position:fixed;
+      right:0;
+      bottom:0;
+      height:auto;
+      min-height:100%;
+      width:auto;
+      min-width:100%;
+      z-index:-100;
+      background-size:cover;
+      background-image: url(./images/white-sand-beach-2252020_1920.jpg);             
+    }            
+    .cursor_item {
+      position: absolute;
+      width: 100px;
+      height: 66px;
+      top: 0;
+      left: 0;
+      margin: -33px 0 0 -50px;
+      transition: all .5s cubic-bezier(0.830, 0.005, 0.195, 1.000);
+    }
+    .cursor_item img {
+      width: 100%;
+    }
+    button {
+      font-size: 40px;
+      font-weight: bold;
+      background-color: #fff;
+      color: royalblue;
+      padding: 30px 80px;
+      margin: 50px;
+      cursor: pointer;
+      border: none;
+      border-radius: 20px;
+      transition: all .5s cubic-bezier(0.830, 0.005, 0.195, 1.000);
+    }
+    button:hover {
+      background-color: royalblue;
+      color: #fff;
+      font-size: 80px;
+      padding: 80px 120px;
+    }
+
+  </style>
+  <script>
+    let cursor_item;
+    let h1;
+
+    let x = 0;
+    let y = 0;
+    let mx = 0;
+    let my = 0;
+    let speed = 0.08;
+
+    window.onload = function() {
+      // h1 = document.getElementsByTagName("h1")[0];
+      cursor_item = document.getElementsByClassName("cursor_item")[0];
+
+      window.addEventListener('click', mouseFunc, false);
+
+      function mouseFunc(e){
+        x = e.clientX;
+        y = e.clientY;
+        cursor_item.style.transform = "translate("+ x + "px, " + y + "px)";
+      }
+      // loop();
+    }
+
+    // function loop() {
+    //   mx += (x - mx) * speed;
+    //   my += (y - my) * speed;
+
+    //   cursor_item.style.transform = "translate("+ mx + "px, " + my + "px)";
+    //   window.requestAnimationFrame(loop)
+    // }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="cursor_item">
+      <img src="./images/sea-1328939_640.png" alt="">
+    </div>
+    <button type="button">START</button>  
+  </div>
+</body>
+</html>

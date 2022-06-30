@@ -11,16 +11,16 @@
       background: linear-gradient(150deg, #937DC2, #C689C6, #E8A0BF, #FCC5C0);
     }
     .progress {
-      width: 100%;
+      width: 4px;
       position: fixed;
-      height: 5px;
-      top: 0;
-      left: 0;
+      height: 140px;
+      top: 40%;
+      left: 10px;
       background-color: black;
       z-index: 10;
     }
     .bar {
-      width: 0%;
+      width: 4px;
       position: absolute;
       height: 5px;
       top: 0;
@@ -45,7 +45,7 @@
         );
       console.log(per)
 
-      bar.style.width = per + "%";
+      bar.style.height = per + "%";
     },false)
 
   </script>

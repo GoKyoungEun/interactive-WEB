@@ -43,18 +43,14 @@
 <br>
 
 ### scrollTop
-1. 세로 진행 바 만들기 예제
-
+1.세로 진행 바 만들기 예제
 <a href="http://gaeng0.dothome.co.kr/interactive/scrollTop.html" target="_blank">예제보기</a>
-
 파일명 : scrollTop.html
 
 <br>
 
-2. 스크롤을 내리면 상단 이미지가 커지면서 opacity값이 0.3으로 투명해지고 뒤에 검정배경이 나타나는 예제
-
+2.스크롤을 내리면 상단 이미지가 커지면서 opacity값이 0.3으로 투명해지고 뒤에 검정배경이 나타나는 예제
 <a href="http://gaeng0.dothome.co.kr/interactive/brunch.html" target="_blank">예제보기</a>
-
 파일명 : brunch.html
 
 <br>
